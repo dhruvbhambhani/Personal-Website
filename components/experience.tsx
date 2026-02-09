@@ -43,24 +43,6 @@ export default function Experience() {
       skills: ["Lab Equipment", "Technical Support", "Electrical Engineering"],
     },
     {
-      year: "September 2025 – Present",
-      role: "Co-Founder",
-      company: "Pillar AI",
-      description: "Novel local AI Automations for Real Estate using Agentic AI",
-      skills: ["Agentic AI", "Real Estate", "Automation", "LLMs"],
-    },
-    {
-      year: "May 2024 – August 2024",
-      role: "Intern",
-      company: "JBB Asset Management",
-      description:
-        "Handled financials/payroll for 400+ units and built Full Stack Website (React, HTML, Supabase, CSS)",
-      skills: ["React", "HTML", "Supabase", "CSS", "Full Stack"],
-    },
-  ]
-
-  const volunteering = [
-    {
       year: "August 2025 – Present",
       role: "TURTLE Robotics",
       company: "Texas A&M",
@@ -78,6 +60,24 @@ export default function Experience() {
         },
       ],
     },
+    {
+      year: "September 2025 – Present",
+      role: "Co-Founder",
+      company: "Pillar AI",
+      description: "Novel local AI Automations for Real Estate using Agentic AI",
+      skills: ["Agentic AI", "Real Estate", "Automation", "LLMs"],
+    },
+    {
+      year: "May 2024 – August 2024",
+      role: "Intern",
+      company: "JBB Asset Management",
+      description:
+        "Handled financials/payroll for 400+ units and built Full Stack Website (React, HTML, Supabase, CSS)",
+      skills: ["React", "HTML", "Supabase", "CSS", "Full Stack"],
+    },
+  ]
+
+  const volunteering = [
     {
       year: "January 2025 – May 2025",
       role: "Data Analyst",
@@ -109,26 +109,58 @@ export default function Experience() {
               className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
                 }`}
             >
-              <div className="group relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
-                <div className="relative bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                    <div>
-                      <h3 className="text-xl font-bold text-cyan-400">{exp.role}</h3>
+              {exp.dualRoles ? (
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
+                  <div className="relative bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
+                    <div className="mb-6">
+                      <h3 className="text-2xl font-bold text-cyan-400 mb-1">{exp.role}</h3>
                       <p className="text-gray-400">{exp.company}</p>
+                      <p className="text-sm text-gray-500 mt-2">{exp.description}</p>
+                      <span className="text-sm text-gray-400 block mt-3">{exp.year}</span>
                     </div>
-                    <span className="text-sm text-gray-400 mt-2 md:mt-0">{exp.year}</span>
-                  </div>
-                  <p className="text-gray-300 mb-4">{exp.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill, i) => (
-                      <span key={i} className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded">
-                        {skill}
-                      </span>
-                    ))}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {exp.dualRoles.map((role, roleIndex) => (
+                        <div
+                          key={roleIndex}
+                          className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 hover:border-cyan-500/60 transition-all"
+                        >
+                          <h4 className="text-lg font-semibold text-cyan-300 mb-2">{role.title}</h4>
+                          <p className="text-gray-300 text-sm mb-3">{role.details}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {role.skills.map((skill, i) => (
+                              <span key={i} className="text-xs px-2 py-1 bg-cyan-500/30 text-cyan-200 rounded">
+                                {skill}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="group relative">
+                  <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
+                  <div className="relative bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                      <div>
+                        <h3 className="text-xl font-bold text-cyan-400">{exp.role}</h3>
+                        <p className="text-gray-400">{exp.company}</p>
+                      </div>
+                      <span className="text-sm text-gray-400 mt-2 md:mt-0">{exp.year}</span>
+                    </div>
+                    <p className="text-gray-300 mb-4">{exp.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, i) => (
+                        <span key={i} className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -139,69 +171,31 @@ export default function Experience() {
 
         <div className="space-y-8">
           {volunteering.map((vol, index) => (
-            <div key={index}>
-              {vol.dualRoles ? (
-                <div
-                  className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                    }`}
-                >
-                  <div className="group relative">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
-                    <div className="relative bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
-                      <div className="mb-6">
-                        <h3 className="text-2xl font-bold text-cyan-400 mb-1">{vol.role}</h3>
-                        <p className="text-gray-400">{vol.company}</p>
-                        <p className="text-sm text-gray-500 mt-2">{vol.description}</p>
-                        <span className="text-sm text-gray-400 block mt-3">{vol.year}</span>
-                      </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {vol.dualRoles.map((role, roleIndex) => (
-                          <div
-                            key={roleIndex}
-                            className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 hover:border-cyan-500/60 transition-all"
-                          >
-                            <h4 className="text-lg font-semibold text-cyan-300 mb-2">{role.title}</h4>
-                            <p className="text-gray-300 text-sm mb-3">{role.details}</p>
-                            <div className="flex flex-wrap gap-2">
-                              {role.skills.map((skill, i) => (
-                                <span key={i} className="text-xs px-2 py-1 bg-cyan-500/30 text-cyan-200 rounded">
-                                  {skill}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
+            <div
+              key={index}
+              className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                }`}
+            >
+              <div className="group relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
+                <div className="relative bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
+                    <div>
+                      <h3 className="text-xl font-bold text-cyan-400">{vol.role}</h3>
+                      <p className="text-gray-400">{vol.company}</p>
                     </div>
+                    <span className="text-sm text-gray-400 mt-2 md:mt-0">{vol.year}</span>
+                  </div>
+                  <p className="text-gray-300 mb-4">{vol.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {vol.skills.map((skill, i) => (
+                      <span key={i} className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded">
+                        {skill}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              ) : (
-                <div
-                  className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                    }`}
-                >
-                  <div className="group relative">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
-                    <div className="relative bg-slate-800/40 backdrop-blur-xl border border-cyan-500/20 rounded-lg p-6 hover:border-cyan-500/50 transition-all">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3">
-                        <div>
-                          <h3 className="text-xl font-bold text-cyan-400">{vol.role}</h3>
-                          <p className="text-gray-400">{vol.company}</p>
-                        </div>
-                        <span className="text-sm text-gray-400 mt-2 md:mt-0">{vol.year}</span>
-                      </div>
-                      <p className="text-gray-300 mb-4">{vol.description}</p>
-                      <div className="flex flex-wrap gap-2">
-                        {vol.skills.map((skill, i) => (
-                          <span key={i} className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
+              </div>
             </div>
           ))}
         </div>
