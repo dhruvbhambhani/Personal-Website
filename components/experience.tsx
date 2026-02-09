@@ -22,11 +22,25 @@ export default function Experience() {
 
   const experiences = [
     {
-      year: "January 2026",
+      year: "January 2026 – Present",
       role: "Incoming Undergraduate Researcher",
       company: "ENaS Lab, Texas A&M",
-      description: "Exploring IoT and Cyber Security through ML and data-driven intrusion detection research",
-      skills: ["Machine Learning", "Cyber Security", "IoT", "Data Analysis"],
+      description: "Developing data-driven, ML-based security solutions for IoT and cyber-physical systems. Focus on intrusion detection, ML for anomaly detection, and secure networked devices.",
+      skills: ["Machine Learning", "Cyber Security", "IoT", "Intrusion Detection", "Anomaly Detection"],
+    },
+    {
+      year: "January 2026 – Present",
+      role: "Software Engineer / Web Developer",
+      company: "EDEN Robotics",
+      description: "Built 6-layer cognitive architecture for humanoid robot using ROS2, Ollama LLMs, and Jetson Nano with <100ms decision-making. Developed affective AI with long-term memory and integrated CV, NLP, motion planning pipeline in NVIDIA Isaac Sim. Maintaining and improving the website currently.",
+      skills: ["ROS2", "Ollama", "Jetson Nano", "Computer Vision", "NLP", "Isaac Sim"],
+    },
+    {
+      year: "January 2026 – Present",
+      role: "Student Worker",
+      company: "Texas A&M University",
+      description: "Conducting tasks in Electrical Engineering labs including preparing equipment, assisting students with equipment problems, and checking in lab workers.",
+      skills: ["Lab Equipment", "Technical Support", "Electrical Engineering"],
     },
     {
       year: "September 2025 – Present",
@@ -34,13 +48,6 @@ export default function Experience() {
       company: "Pillar AI",
       description: "Novel local AI Automations for Real Estate using Agentic AI",
       skills: ["Agentic AI", "Real Estate", "Automation", "LLMs"],
-    },
-    {
-      year: "July 2025 – Present",
-      role: "Private Tutor",
-      company: "Self-Employed",
-      description: "Tutoring HS and college students in Algebra 2, Calculus, SAT/ACT Math & Science",
-      skills: ["Algebra", "Calculus", "SAT/ACT", "STEM Education"],
     },
     {
       year: "May 2024 – August 2024",
@@ -53,6 +60,24 @@ export default function Experience() {
   ]
 
   const volunteering = [
+    {
+      year: "August 2025 – Present",
+      role: "TURTLE Robotics",
+      company: "Texas A&M",
+      description: "Full-Stack development for 350+ member robotics organization, built a fully-functional robot",
+      dualRoles: [
+        {
+          title: "Web Developer",
+          details: "Designed and maintained the TURTLE Robotics website. Built a Supabase-backed SQL database with custom forms for member data. Developed an AI-powered onboarding chatbot using fine-tuned Gemini LLM, contributing to 40% increase in project engagement.",
+          skills: ["React", "Supabase", "SQL", "Gemini LLM", "AI Chatbot"],
+        },
+        {
+          title: "Robotics Engineer",
+          details: "Built and programmed an ESP32-based robot with wireless joystick input, PWM motor control, and servo-actuated claw using Arduino/C++.",
+          skills: ["ESP32", "Arduino", "C++", "PWM", "Servo Control"],
+        },
+      ],
+    },
     {
       year: "January 2025 – May 2025",
       role: "Data Analyst",
@@ -68,40 +93,21 @@ export default function Experience() {
       description: "Full stack development for NPC Room Project using Java, HTML, Spring Boot, and MongoDB",
       skills: ["Java", "Spring Boot", "MongoDB", "Full Stack", "Web Dev"],
     },
-    {
-      year: "November 2025 – Present",
-      role: "TURTLE Robotics",
-      company: "Texas A&M",
-      description: "Leading 300+ member robotics club",
-      dualRoles: [
-        {
-          title: "Web Developer",
-          details: "Manage and maintain TURTLE Robotics website, ensuring seamless digital presence for the club",
-          skills: ["React", "Web Design", "Deployment"],
-        },
-        {
-          title: "Robotics Engineer",
-          details: "Design and develop cutting-edge robotics solutions and mechanical systems for competition",
-          skills: ["Robotics", "CAD", "SOLIDWORKS", "Mechanical Design"],
-        },
-      ],
-    },
   ]
 
   return (
     <section id="experience" className="py-20 relative">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-4xl font-bold mb-16 text-center">
-          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Experience</span>
+          <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Work Experience</span>
         </h2>
 
         <div ref={ref} className="space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className={`transition-all duration-700 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-              }`}
+              className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                }`}
             >
               <div className="group relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
@@ -136,9 +142,8 @@ export default function Experience() {
             <div key={index}>
               {vol.dualRoles ? (
                 <div
-                  className={`transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                  }`}
+                  className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                    }`}
                 >
                   <div className="group relative">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />
@@ -172,9 +177,8 @@ export default function Experience() {
                 </div>
               ) : (
                 <div
-                  className={`transition-all duration-700 ${
-                    isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-                  }`}
+                  className={`transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                    }`}
                 >
                   <div className="group relative">
                     <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300" />

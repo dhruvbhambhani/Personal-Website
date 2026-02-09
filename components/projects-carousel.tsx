@@ -34,28 +34,34 @@ export default function ProjectsCarousel() {
 
   const projects = [
     {
-      title: "NPC Room (Aggie Coding Club)",
-      description: "Full stack development project utilizing React, Java, Spring Boot, and MongoDB",
-      tags: ["React", "Java", "Spring Boot", "MongoDB"],
-      period: "January 2025 - May 2025",
+      title: "EDEN · TURTLE Robotics",
+      description: "6-layer cognitive architecture for humanoid robot with ROS2, Ollama LLMs, and Jetson Nano",
+      tags: ["ROS2", "Ollama", "Jetson Nano", "Isaac Sim"],
+      period: "January 2026 — Present",
     },
     {
-      title: "Chemical Plant Simulation",
-      description: "Data cleaning and ML model simulation for operation efficiency in chemical plant automation",
-      tags: ["Python", "ML Models", "Data Science"],
-      period: "January 2025 - May 2025",
+      title: "CRYOS · TAMUHack26",
+      description: "Personalized fraud detection with 20 AI agents using multi-tiered LLMs. Runners-up in USAA Track",
+      tags: ["Python", "OpenAI API", "Claude API", "Vector DBs"],
+      period: "January 2026",
     },
     {
-      title: "JBB Asset Management Website",
-      description: "Full-stack website for managing assets and financials with React frontend and Supabase backend",
-      tags: ["React", "HTML", "CSS", "Supabase"],
-      period: "May 2024 - August 2024",
+      title: "Crescent Place Apartments",
+      description: "Modern real estate website with Next.js, TypeScript, and cloud database backend",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Cloud DB"],
+      period: "January 2026 — Present",
     },
     {
-      title: "Personal Website Portfolio",
-      description: "Modern portfolio website with glassmorphism design and scroll-triggered animations",
-      tags: ["React", "Next.js", "Tailwind CSS", "Animations"],
-      period: "November 2025 - Present",
+      title: "Personal Website",
+      description: "Multi-page portfolio with Next.js 16, React 19, glassmorphism design and 57+ Radix UI components",
+      tags: ["Next.js", "React 19", "TypeScript", "Radix UI"],
+      period: "November 2025 — Present",
+    },
+    {
+      title: "JBB Asset Management",
+      description: "Next.js real estate platform with TypeScript, Tailwind CSS, React Hook Form + Zod, and SEO",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Zod"],
+      period: "October 2025 — Present",
     },
   ]
 
@@ -93,9 +99,8 @@ export default function ProjectsCarousel() {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`flex-shrink-0 w-96 transition-all duration-700 ${
-                  isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-                }`}
+                className={`flex-shrink-0 w-96 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  }`}
               >
                 <div className="group-hover:pause-animation h-full relative overflow-hidden rounded-lg">
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-75 transition duration-300 blur" />
