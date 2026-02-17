@@ -24,7 +24,7 @@ export default function Experience() {
     {
       year: "February 2026 – Present",
       role: "Web Developer",
-      company: "AggieX - Innovation Branch (Startup Incubator)",
+      company: "AggieX - GENESIS (Innovation Branch - Startup Incubator)",
       description: "Built a full-stack startup application platform using React 19, Vite, and Framer Motion — featuring a 4-step wizard form with client-side routing and animated multi-step UI. Built Supabase-powered database to persist startup application data, including founder profiles, traction metrics, and video pitch submissions, to a PostgreSQL backend.",
       skills: [],
     },
