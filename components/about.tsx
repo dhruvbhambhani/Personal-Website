@@ -94,7 +94,7 @@ export default function About() {
                 </div>
                 <div className="bg-black/40 backdrop-blur-xl border border-blue-500/30 rounded-lg p-4 hover:border-blue-500/60 transition-all">
                   <p className="text-sm text-gray-300">
-                    <span className="text-blue-400 font-semibold">Licenses:</span> Texas Real Estate Professional (TREC)
+                    <span className="text-blue-400 font-semibold">Awards:</span> Dean’s Honor Roll (Fall 2025)
                   </p>
                 </div>
               </div>
