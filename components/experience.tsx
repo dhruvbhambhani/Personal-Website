@@ -22,6 +22,13 @@ export default function Experience() {
 
   const experiences = [
     {
+      year: "February 2026 – Present",
+      role: "Web Developer",
+      company: "AggieX - Innovation Branch (Startup Incubator)",
+      description: "Built a full-stack startup application platform using React 19, Vite, and Framer Motion — featuring a 4-step wizard form with client-side routing and animated multi-step UI. Built Supabase-powered database to persist startup application data, including founder profiles, traction metrics, and video pitch submissions, to a PostgreSQL backend.",
+      skills: [],
+    },
+    {
       year: "January 2026 – Present",
       role: "Incoming Undergraduate Researcher",
       company: "ENaS Lab, Texas A&M",
@@ -32,7 +39,7 @@ export default function Experience() {
       year: "January 2026 – Present",
       role: "Software Engineer / Web Developer",
       company: "EDEN Robotics",
-      description: "Built 6-layer cognitive architecture for humanoid robot using ROS2, Ollama LLMs, and Jetson Nano with <100ms decision-making. Developed affective AI with long-term memory and integrated CV, NLP, motion planning pipeline in NVIDIA Isaac Sim. Maintaining and improving the website currently.",
+      description: "• Built 6-layer cognitive architecture for humanoid robot using ROS2, Ollama LLMs, and Jetson Nano with <100ms decision-making. Developed affective AI with long-term memory and integrated CV, NLP, motion planning pipeline in NVIDIA Isaac Sim. \n• Maintaining and improving the website. Currently developing a RAG-based chatbot for technical support for interested individuals/companies, powered by our documentation.",
       skills: ["ROS2", "Ollama", "Jetson Nano", "Computer Vision", "NLP", "Isaac Sim"],
     },
     {
@@ -150,7 +157,7 @@ export default function Experience() {
                       </div>
                       <span className="text-sm text-gray-400 mt-2 md:mt-0">{exp.year}</span>
                     </div>
-                    <p className="text-gray-300 mb-4">{exp.description}</p>
+                    <p className="text-gray-300 mb-4 whitespace-pre-line">{exp.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, i) => (
                         <span key={i} className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded">
