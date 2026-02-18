@@ -79,6 +79,15 @@ export default function Hero() {
               <ArrowRight className="h-5 w-5" />
             </span>
           </Link>
+          <Link
+            href="/experience"
+            className="group relative inline-flex items-center justify-center overflow-hidden rounded-full border border-cyan-400/50 bg-white/5 px-10 py-3 text-base font-semibold text-cyan-200 shadow-[0_0_40px_rgba(56,189,248,0.15)] transition hover:scale-[1.02] hover:border-cyan-400 hover:bg-white/10"
+          >
+            <span className="relative z-10 flex items-center gap-3">
+              See My Experience
+              <ArrowRight className="h-5 w-5" />
+            </span>
+          </Link>
         </div>
 
         <div className="mt-16 grid w-full gap-4 sm:grid-cols-3">

@@ -23,17 +23,10 @@ export default function Experience() {
   const experiences = [
     {
       year: "February 2026 – Present",
-      role: "Web Developer",
+      role: "Web Development Lead",
       company: "AggieX - GENESIS (Innovation Branch - Startup Incubator)",
-      description: "Built a full-stack startup application platform using React 19, Vite, and Framer Motion — featuring a 4-step wizard form with client-side routing and animated multi-step UI. Built Supabase-powered database to persist startup application data, including founder profiles, traction metrics, and video pitch submissions, to a PostgreSQL backend.",
-      skills: [],
-    },
-    {
-      year: "January 2026 – Present",
-      role: "Incoming Undergraduate Researcher",
-      company: "ENaS Lab, Texas A&M",
-      description: "Developing data-driven, ML-based security solutions for IoT and cyber-physical systems. Focus on intrusion detection, ML for anomaly detection, and secure networked devices.",
-      skills: ["Machine Learning", "Cyber Security", "IoT", "Intrusion Detection", "Anomaly Detection"],
+      description: "Built a full-stack startup application platform using React 19, Vite, and Framer Motion — featuring a 4-step wizard form with client-side routing and animated multi-step UI. Built Supabase-powered database to persist startup application data, including founder profiles, traction metrics, and video pitch submissions, to a complex backend.",
+      skills: ["React", "Vite", "Framer Motion", "Supabase", "SQL"],
     },
     {
       year: "January 2026 – Present",
@@ -41,6 +34,13 @@ export default function Experience() {
       company: "EDEN Robotics",
       description: "• Built 6-layer cognitive architecture for humanoid robot using ROS2, Ollama LLMs, and Jetson Nano with <100ms decision-making. Developed affective AI with long-term memory and integrated CV, NLP, motion planning pipeline in NVIDIA Isaac Sim. \n• Maintaining and improving the website. Currently developing a RAG-based chatbot for technical support for interested individuals/companies, powered by our documentation.",
       skills: ["ROS2", "Ollama", "Jetson Nano", "Computer Vision", "NLP", "Isaac Sim"],
+    },
+    {
+      year: "January 2026 – Present",
+      role: "Incoming Undergraduate Researcher",
+      company: "ENaS Lab, Texas A&M",
+      description: "Developing data-driven, ML-based security solutions for IoT and cyber-physical systems. Focus on intrusion detection, ML for anomaly detection, and secure networked devices.",
+      skills: ["Machine Learning", "Cyber Security", "IoT", "Intrusion Detection", "Anomaly Detection"],
     },
     {
       year: "January 2026 – Present",
