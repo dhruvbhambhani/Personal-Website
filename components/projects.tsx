@@ -6,6 +6,16 @@ import { Github, Globe } from "lucide-react"
 
 const projects = [
   {
+    title: "EDEN Robotics Website",
+    description: [
+      "Built landing page for Eden, an AI/robotics project — showcasing its architecture, use cases, GitHub stats, team members, and a walkthrough, with a polished, animated single-page design using React 19 + Vite, styled with Tailwind CSS 4",
+      "Currently building an intelligent documentation assistant for a multi-layer robotics software framework. The chatbot leverages Retrieval-Augmented Generation (RAG) to let users ask natural language questions and get precise, context-aware answers drawn directly from the project's technical documentation",
+    ],
+    tags: ["React 19", "Vite", "Tailwind CSS 4", "RAG", "AI Chatbot"],
+    period: "Feb 2026 — Present",
+    website: "https://eden-robotics.github.io/Eden/"
+  },
+  {
     title: "EDEN Robotics",
     description: [
       "Developed 6-layer distributed cognitive architecture for humanoid robot using ROS2, Ollama LLMs, and Jetson Nano with <100ms real-time decision-making",
@@ -15,16 +25,6 @@ const projects = [
     tags: ["ROS2", "Ollama", "Jetson Nano", "Isaac Sim", "Computer Vision", "NLP"],
     period: "Jan 2026 — Present",
     github: "https://github.com/EDEN-robotics",
-  },
-  {
-    title: "EDEN Robotics Website",
-    description: [
-      "Built landing page for Eden, an AI/robotics project — showcasing its architecture, use cases, GitHub stats, team members, and a walkthrough, with a polished, animated single-page design using React 19 + Vite, styled with Tailwind CSS 4",
-      "Currently building an intelligent documentation assistant for a multi-layer robotics software framework. The chatbot leverages Retrieval-Augmented Generation (RAG) to let users ask natural language questions and get precise, context-aware answers drawn directly from the project's technical documentation",
-    ],
-    tags: ["React 19", "Vite", "Tailwind CSS 4", "RAG", "AI Chatbot"],
-    period: "Feb 2026 — Present",
-    website: "https://eden-robotics.github.io/Eden/"
   },
   {
     title: "CRYOS · TAMUHack26 · Runners-up in USAA Track",
